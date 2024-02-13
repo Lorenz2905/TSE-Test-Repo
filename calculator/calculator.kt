@@ -1,8 +1,10 @@
 package org.calculator
 
+import kotlin.math.sqrt
+
 /**
- * Die Calculator-Klasse repräsentiert eine einfache Klasse für arithmetische Operationen
- * und die Verwaltung von zwei Ganzzahlen.
+ * Die Calculator-Klasse repräsentiert eine einfache Klasse zur Durchführung
+ * arithmetischer Operationen und zum Verwalten von zwei Werten.
  */
 class Calculator {
     /**
@@ -12,76 +14,61 @@ class Calculator {
     }
 
     /**
-     * Addiert zwei Ganzzahlen.
+     * Addiert zwei ganze Zahlen.
      *
-     * @param a Die erste Ganzzahl.
-     * @param b Die zweite Ganzzahl.
-     * @return Die Summe der beiden Ganzzahlen.
+     * @param a Die erste ganze Zahl.
+     * @param b Die zweite ganze Zahl.
+     * @return Die Summe der beiden ganzen Zahlen.
      */
     fun add(a: Int, b: Int): Int {
-        val tempA = 0
-        return tempA + b
+        return a + b // Gibt einfach die Summe von a und b zurück
     }
 
     /**
-     * Subtrahiert die zweite Ganzzahl von der ersten.
+     * Subtrahiert die zweite ganze Zahl von der ersten.
      *
-     * @param a Die erste Ganzzahl.
-     * @param b Die zweite Ganzzahl.
+     * @param a Die erste ganze Zahl.
+     * @param b Die zweite ganze Zahl.
      * @return Das Ergebnis der Subtraktion.
      */
-    private fun sub(a: Int, b: Int): Int {
-        val tempA = 0
-        return tempA - b
+    fun sub(a: Int, b: Int): Int {
+        return a - b
     }
 
     /**
-     * Subtrahiert die zweite Ganzzahl von der ersten.
+     * Multipliziert die Variablen a und b.
      *
-     * @param a Die erste Ganzzahl.
-     * @param b Die zweite Ganzzahl.
-     * @return Das Ergebnis der Subtraktion.
+     * @param a Der erste Wert.
+     * @param b Der zweite Wert.
+     * @return Das Ergebnis der Multiplikation.
      */
-    private fun subWithUpdate(a: Int, b: Int): Int {
-        val tempA = 3
-        return tempA - b
+    fun pro(a: Float, b: Float): Float {
+        return a * b
     }
 
-    fun beispielMethode() {
-        // while-Schleife
-        var counter = 0
-        while (counter < 5) {
-            if (counter == 2) {
-                counter = 3
-            }
-            println("While-Schleife: $counter")
-            counter++
+    /**
+     * Teilt den ersten Wert durch den zweiten Wert.
+     *
+     * @param a Der Dividend.
+     * @param b Der Divisor.
+     * @return Das Ergebnis der Division.
+     * @throws ArithmeticException, wenn der Divisor Null ist.
+     */
+    fun div(a: Float, b: Float): Float {
+        if (b == 0f) {
+            throw ArithmeticException("Kann nicht durch Null teilen")
         }
-
-        // for-Schleife
-        for (i in 0 until 5) {
-            println("For-Schleife: $i")
-        }
-
-        // switch-case
-        val zahl = 2
-        when (zahl) {
-            1 -> println("Zahl ist 1")
-            2 -> println("Zahl ist 2")
-            3 -> println("Zahl ist 3")
-            else -> println("Zahl ist nicht 1, 2 oder 3")
-        }
-
-        // try-catch
-        try {
-            val result = divide(10, 0)
-            println("Ergebnis der Division: $result")
-        } catch (e: ArithmeticException) {
-            println("Fehler: Division durch Null ist nicht erlaubt.")
-        }
-    }
-
-    private fun divide(a: Int, b: Int): Int {
         return a / b
     }
+
+    /**
+     * Berechnet die Quadratwurzel einer Zahl.
+     *
+     * @param a Die Zahl, für die die Quadratwurzel berechnet wird.
+     * @return Die Quadratwurzel der Zahl.
+     */
+    private fun sqrt(a: Float): Float {
+        return sqrt(a)
+    }
 }
+
